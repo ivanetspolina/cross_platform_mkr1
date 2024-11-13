@@ -16,8 +16,8 @@ namespace mkr1
             {
                 Console.OutputEncoding = Encoding.UTF8;
 
-                string inputFilePath = args.Length > 0 ? args[0] : Path.Combine("cross_platform_mkr1", "INPUT.TXT");
-                string outputFilePath = Path.Combine("cross_platform_mkr1", "OUTPUT.TXT");
+                string inputFilePath = args.Length > 0 ? args[0] : Path.Combine("mkr1", "INPUT.TXT");
+                string outputFilePath = Path.Combine("mkr1", "OUTPUT.TXT");
                 string[] value = File.ReadAllLines(inputFilePath);
 
                 InputCheck(value);
@@ -25,7 +25,7 @@ namespace mkr1
                 File.WriteAllText(outputFilePath, result.Trim());
 
                 Console.WriteLine("File OUTPUT.TXT created");
-                Console.WriteLine("cross_platform_mkr1");
+                Console.WriteLine("mkr1");
                 Console.WriteLine("Input data:");
                 Console.WriteLine(string.Join(Environment.NewLine, value).Trim());
                 Console.WriteLine("Output data:");
